@@ -20,6 +20,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.TextView
+import android.content.pm.ActivityInfo
 
 class ClickerService : AccessibilityService() {
 
@@ -134,7 +135,10 @@ class ClickerService : AccessibilityService() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             PixelFormat.TRANSLUCENT
-        ).apply { gravity = Gravity.TOP or Gravity.START }
+                ).apply {
+            gravity = Gravity.TOP or Gravity.START
+            screenOrientation = ActivityInfo.SCREEN_ORIENTATION_USER
+        }
 
     private fun createCrosshair() {
         val size = dp(56)
