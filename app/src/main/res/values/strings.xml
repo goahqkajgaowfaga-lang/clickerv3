@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoClicker</string>
+    <string name="service_description">Имитирует касания в указанной точке экрана и показывает плавающую панель управления.</string>
+</resources>
